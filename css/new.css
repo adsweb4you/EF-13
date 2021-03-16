@@ -1,0 +1,153 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+ 
+
+label:hover{
+ cursor: pointer;
+}
+
+.checflex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.checflex input{
+  display: none;
+}
+
+.checflex span{
+   display: block;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #ccc;
+    border-radius: 50%;  
+    transition: all .9s;
+    position: relative;  
+}
+
+.checflex .w-50, .checflex    p {
+  width: 50%;
+  position: relative;
+  z-index: 9999;
+}
+
+.w-50{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hidden + p{
+  color: #000;
+  transition: all .9s;
+}
+
+.hidden:checked + p{
+    color: #fff;
+  }
+
+.hidden:checked ~ div span{
+    background-color: aqua;
+     border: 2px solid #cccccc0d;
+}
+
+.hidden:checked ~ div span::after{
+    content: "\2713";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+
+.hidden ~ .gb{
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: #2196f3;
+    left: 50%;
+    opacity: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s;
+}
+
+.hidden:checked ~  .gb{
+    opacity: 1;
+    width: 100%;
+ 
+}
+
+body{
+
+    animation-name: anime;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+.modcheck{
+    position: relative;
+    width: 250px;
+    box-shadow: 3px 5px 3px #cccccc7a;
+    border-radius: 3px;
+    margin: auto;
+    padding: 4px 27px;
+    transition: all .6s;
+    background: #456f91;
+    transform: skew(-10deg, -9deg);
+ 
+    margin-top: 80px;
+}
+
+.modcheck:hover{
+    box-shadow: 18px 15px 3px #cccccc7a;
+    animation-name: ske;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+}
+
+
+@keyframes ske {
+
+    0% { transform: skew(-10deg, -9deg) scale(.3);}
+    50%   { transform: skew(0deg, 0deg) scale(1);}
+    100%   { transform: skew(-50deg, -70deg) scale(.9);}
+}
+
+@keyframes anime {
+
+from {background-color: black;}
+to   {background-color: brown;}
+
+}
+
+svg{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation-name: heart;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transform: translate(-50%, -50%);
+ 
+}
+
+@keyframes heart {
+
+    0% { transform: translate(-50%, -50%) scale(.6); color: #fff;}
+    100%   { transform: translate(-50%, -50%)  scale(1); color: red;}
+    
+    }

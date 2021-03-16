@@ -1,0 +1,483 @@
+@font-face{
+    font-family: Banner;
+    src: url('../fonts/bpg-banner-webfont.woff');
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+  
+    height: 2000px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.shadow{
+    box-shadow: 3px 3px 3px #ccc;
+    background-color: #fff;
+    margin-top: -30px;
+}
+
+.card{
+    /* მომრგვალებული კუთხე */
+    border-radius: 10px;
+    /* border-bottom-right-radius: 50px;
+    border-top-right-radius: 150px; */
+    
+    background-color: #fff;
+    /* border-style: solid;
+    border-width: 6px;
+    border-color: #1b7234; */
+    border: dashed red 2px;
+    /* border-bottom: 15px solid green; */
+    /* outline: 7px solid green; */
+    /* margin: 50px 25px 45px 88px; */
+    margin: 15px auto;
+    padding: 27px;
+}
+
+.t-b{
+ color: black;
+ padding: 25px;
+ text-align: center;
+}
+
+ 
+ p{
+     
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Banner;
+    /* text-align: center; */
+    text-transform: uppercase;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+     
+ }
+
+ a{
+    font-family: Banner;
+    text-decoration: none;
+ }
+
+ header{
+       /* background-color: #020203;    */
+     
+     background-image: url('https://wallpapercave.com/wp/wp7864479.png');
+     background-size: cover;
+     background-position: center ;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     height: 450px;
+ 
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+ }
+
+
+ img{
+     width: 100%;
+ }
+
+ 
+
+ .row{
+    
+    display: flex;
+    flex-wrap: wrap;
+ 
+    width: 100%;
+ }
+
+ .col-3{
+    width: 25%;
+    padding: 0 15px;
+ }
+
+ .navs{
+     position: fixed;
+     width: 100%;
+     background-color: #fff;
+     
+ }
+
+ .list-inl{
+     display: inline-block;
+     padding: 16px 15px;
+    
+ }
+
+ .bar {
+    margin-block-start: 0;
+    margin-left: auto;
+    margin-block-end: 0;
+ }
+
+ .text-w{
+     color: #fff;
+ }
+
+ .active{
+    display: inline-block;
+    padding: 18px;
+    background-color: #e91e63;
+    border-radius: 56px;
+ }
+
+ .cobt{
+     width: 90%;
+     margin: auto;
+ }
+
+ .flx{
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .col-100{
+     width: 100%;
+     background-color: aqua;
+     height: 50px;
+     margin-bottom: 30px;
+ }
+
+ .col-50{
+    width: 47%;
+    background-color: aqua;
+    height: 50px;
+    margin-bottom: 30px;
+    padding: 15px ;
+    margin: 15px;
+}
+
+.col-33{
+    width: 31%;
+    background-color: aqua;
+    height: 50px;
+    margin-bottom: 30px;
+    padding: 15px ;
+    margin: 15px;
+}
+
+.col-25{
+    width: 22%;
+    background-color: aqua;
+    height: 50px;
+    margin-bottom: 30px;
+    padding: 15px ;
+    margin: 15px;
+}
+
+.logo{
+    width: 80px;
+    height: 100%;
+}
+
+.pb-3{
+    padding-bottom: 50px;
+}
+
+.col-3{
+    width: 33.3333%;
+}
+
+.position{
+    position: relative;
+}
+
+.rel{
+    width: 250px;
+    height: 250px;
+    margin:auto;
+    border: 1px solid red ;
+    position: relative;
+}
+
+.abs{
+    position: sticky;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+ 
+   /* absolute element გაცენტრება ვერტიკალურად და ჰორიზონტალურად */
+    top: 0;
+    
+   
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.scrolltop{
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+
+}
+
+.ssssd{
+    color: #fff;
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+    
+}
+
+#s12{
+    background-color: green;
+}
+
+#s13{
+    background-color: red;
+}
+
+#s14{
+    background-color: blue;
+}
+
+#s15{
+    background-color: yellowgreen;
+}
+
+.produc{
+    width: 300px;
+    margin: auto;
+    position: relative;
+    box-shadow: 3px 3px 3px rgb(231, 230, 230);
+}
+
+/* .produc::after{
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color:red;
+  position: absolute;
+  z-index: 888;
+} */
+
+.produc::before{
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: #2eff2e21;
+    right: 0;
+    transition: all .6s;
+    top: 0;
+    border-radius: 7px;
+  }
+
+  .produc:hover::before {
+    right: -7%;
+    top: 5%;
+  }
+.prodhead{
+    position: relative;
+}
+
+.bghr{
+    background-color: #7fffd48c;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.prodimg{
+    width: 100%;
+    height: 210px;
+    display: block;
+    object-fit: cover;
+}
+
+.produc .read{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 7px;
+    z-index: 9999;
+    
+}
+
+.produc > small{
+  color: red;
+}
+
+.produc + small{
+    color: green;
+}
+
+.produc ~ small{
+    color: green;
+}
+
+.prod-title{
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prod-body{
+    padding: 25px;
+    position: relative;
+    background-color: #fff;
+}
+
+h2, h5{
+  
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+}
+
+.pt054{
+    padding-top: 15px;
+}
+
+.colors{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 50px;
+    margin-top: 7px;
+}
+
+small{
+    display: block;
+}
+
+ small:first-line{
+    font-size: 45px;
+ 
+}
+
+small::selection{
+    background-color: red;
+    color: #fff;
+}
+
+/* .odds:nth-child(odd){
+    background-color: red;
+} */
+
+p:lang(ka){
+    background-color: rgb(20, 6, 6);
+}
+
+p:lang(en){
+    background-color: rgb(7, 247, 255);
+}
+
+#cheks , #cheks ~ span{
+    display: none;
+}
+
+#cheks:checked ~ span{
+    display: block;
+}
+
+#cheks:checked ~ svg{
+   color: green;
+}
+
+.inlone{
+    display: flex;
+}
+
+.empty:empty{
+ 
+    background: greenyellow;
+}
+
+input[value="active"]{
+   background-color: blue;
+}
+
+input:disabled{
+    cursor: not-allowed;
+}
+
+input + small{
+    display: none;
+}
+
+input:required + small{
+  display: block;
+  color: red;
+}
+
+.odds{
+    display: inline-block;
+}
+
+
+/* ეკრენის დიაპაზონი max=დან min=მდე*/
+
+@media (max-width:1200px) and (min-width:800px){
+
+body{
+    background-color: #000;
+}
+ 
+}
+
+/*  screen < 1200px */
+@media (max-width:1200px){
+
+    body{
+        background-color: red;
+    }
+     
+    }
+
+/*  screen > 1200px */
+@media (min-width:1200px){
+
+  
+     
+    }
+
+
+  @media screen and (max-width:800px){
+    .odds{
+        display: block !important;
+    }
+  }
+
+/* @media (min-width:1200px){
+
+    body{
+        background-color: red;
+    }
+     
+    } */
+
+
+ 
