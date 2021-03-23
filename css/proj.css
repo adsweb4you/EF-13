@@ -36,7 +36,7 @@ body{
     min-width: 10rem;
     background-color: #fff;
     padding: 15px;
-    border-radius: 7px;
+    border-radius: 14px;
     box-shadow: 6px 6px 7px #5b65691c;
     border-top: 0;
     transition: all .9s;
@@ -46,6 +46,8 @@ body{
     opacity: 0;
     pointer-events: none;
 }
+
+ 
 
 .navbar li:last-child{
     padding-right: 0;

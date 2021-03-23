@@ -1,0 +1,40 @@
+.card {
+  position: relative;
+  border-radius: 7px;
+  box-shadow: 7px 7px 7px #ccc;
+  width: 350px;
+  margin: auto;
+}
+.card span {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  display: inline-block;
+  border-radius: 7px;
+  padding: 7px;
+  background-color: #247cff63;
+  color: #2121f1;
+  border: 1px solid;
+}
+.card img {
+  width: 100%;
+}
+.card .card-body {
+  padding: 25px;
+  text-align: center;
+}
+.card .card-body .btn-addcart {
+  border: none;
+  padding: 12px;
+  background-color: green;
+  border-radius: 7px;
+  color: #fff;
+}
+.card .card-body a {
+  display: inline;
+  border-radius: 7px;
+  text-decoration: none;
+  border: 1px solid #ccc;
+}
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,9 @@
+@use 'color.scss';
+
+@mixin button {
+    border:none;
+    padding: 12px;
+    background-color: color.$success;
+    border-radius: 7px;
+    color:#fff;
+}

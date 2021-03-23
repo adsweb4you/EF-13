@@ -1,0 +1,47 @@
+@use 'button.scss';
+
+
+$border-sm:7px;
+$shadow-sm:7px 7px 7px #ccc;
+// start card
+.card{
+  position: relative;
+  border-radius: $border-sm;
+  box-shadow: $shadow-sm;
+  width: 350px;
+  margin: auto;
+
+  span{
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    display: inline-block;
+    border-radius: 7px;
+    padding: 7px;
+    background-color: #247cff63;
+    color: #2121f1;
+    border: 1px solid;
+  }
+
+  img{
+     width: 100%;
+  }
+
+   .card-body{
+     padding: 25px;
+     text-align: center;
+
+     .btn-addcart{
+       @include button.button();
+     }
+
+     a{
+       display: inline;
+       border-radius: $border-sm;
+       text-decoration: none;
+       border: 1px solid #ccc;
+     }
+   }
+ 
+}
+// end  card
