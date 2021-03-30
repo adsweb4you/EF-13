@@ -3,13 +3,40 @@
 
 $border-sm:7px;
 $shadow-sm:7px 7px 7px #ccc;
+$shadow-lg:10px 10px 8px rgb(122, 118, 118);
 // start card
+
+$colors: green, black, blue;
+
+
+
+@each $color in $colors {
+  .h1-#{$color} {
+   color: $color;
+ 
+  }
+}
+
+%test45{
+  background-color: black;
+}
+
 .card{
+  //@extend %test45;
   position: relative;
   border-radius: $border-sm;
+  transition: all .6s;
+  transform: scale(1);
   box-shadow: $shadow-sm;
   width: 350px;
   margin: auto;
+ 
+
+  &:hover{
+    box-shadow: $shadow-lg;
+    transform: scale(1.05);
+  }
+ 
 
   span{
     position: absolute;
@@ -19,12 +46,13 @@ $shadow-sm:7px 7px 7px #ccc;
     border-radius: 7px;
     padding: 7px;
     background-color: #247cff63;
-    color: #2121f1;
+    color: red;
     border: 1px solid;
   }
 
   img{
      width: 100%;
+     cursor: pointer;
   }
 
    .card-body{
@@ -32,10 +60,11 @@ $shadow-sm:7px 7px 7px #ccc;
      text-align: center;
 
      .btn-addcart{
-       @include button.button();
+       @include button.button(#000, 12px, $border-r:true);
      }
 
      a{
+      @include button.button(red, 13px);
        display: inline;
        border-radius: $border-sm;
        text-decoration: none;

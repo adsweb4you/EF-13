@@ -1,9 +1,17 @@
 @use 'color.scss';
 
-@mixin button {
+@mixin button($mycolor, $fontsize, $border-r:false) {
     border:none;
     padding: 12px;
-    background-color: color.$success;
-    border-radius: 7px;
+    font-size: $fontsize;
+    @if $border-r {
+        border-radius: 7px;
+    }
+
+    @else {
+        border-radius: 17px;
+    }
+    background-color: $mycolor;
+   
     color:#fff;
 }

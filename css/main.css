@@ -1,0 +1,52 @@
+.mynav{
+    
+}
+
+.myitem{
+    height: 450px;
+}
+
+.myindicator button{
+ 
+    height: 30px !important;
+    background-color: #ffc107 !important;
+    border-radius: 50% !important;
+    border: 3px solid white !important;
+}
+
+.itembg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ 
+.col-md-4:nth-child(1) .items{
+    height: 350px;
+}
+
+.col-md-4:nth-child(2) .items{
+    height: 175px;
+}
+
+.col-md-4:nth-child(3) .items{
+    height: 190px;
+}
+
+.col-md-4:nth-child(3) .items:nth-child(1){
+    height: 160px;
+}
+
+.bg{
+    height: 30%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    box-shadow: -3px -17px 28px #00000094;
+    z-index: 99999;
+    background-color: #0000009e;
+}
+
+.items h4{
+    position: relative;
+    z-index: 999999;
+}

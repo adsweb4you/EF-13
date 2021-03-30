@@ -1,9 +1,29 @@
+.h1-green {
+  color: green;
+}
+
+.h1-black {
+  color: black;
+}
+
+.h1-blue {
+  color: blue;
+}
+
+ 
+
 .card {
   position: relative;
   border-radius: 7px;
+  transition: all 0.6s;
+  transform: scale(1);
   box-shadow: 7px 7px 7px #ccc;
   width: 350px;
   margin: auto;
+}
+.card:hover {
+  box-shadow: 10px 10px 8px #7a7676;
+  transform: scale(1.05);
 }
 .card span {
   position: absolute;
@@ -13,11 +33,12 @@
   border-radius: 7px;
   padding: 7px;
   background-color: #247cff63;
-  color: #2121f1;
+  color: red;
   border: 1px solid;
 }
 .card img {
   width: 100%;
+  cursor: pointer;
 }
 .card .card-body {
   padding: 25px;
@@ -26,11 +47,18 @@
 .card .card-body .btn-addcart {
   border: none;
   padding: 12px;
-  background-color: green;
+  font-size: 12px;
   border-radius: 7px;
+  background-color: #000;
   color: #fff;
 }
 .card .card-body a {
+  border: none;
+  padding: 12px;
+  font-size: 13px;
+  border-radius: 17px;
+  background-color: red;
+  color: #fff;
   display: inline;
   border-radius: 7px;
   text-decoration: none;
