@@ -66,4 +66,24 @@ let clas = 'img-fluid';
 let html   =  `<img src="${img}" class="${clas}">`;
 
 
-document.getElementById("cards").innerHTML = html;
+ document.getElementById("cards").innerHTML = html;
+
+
+let $ = function(el){
+    return document.querySelectorAll(el);
+}
+
+ 
+let mystr = "მე ვარ IT STEP GEORGIA IT  სტუდენტის";
+
+//ეძებს კონკრეტული სიტყვის ინდექს სტრინგის დასაწყისიდან 
+//mystr.indexOf("IT")
+
+//ეძებს კონკრეტული სიტყვის ინდექს სტრინგის ბოლოდან 
+//mystr.lastIndexOf("IT")
+
+//ეძებს კონკრეტული სიტყვის ინდექს სტრინგის დასაწყისიდან 
+//mystr.search("STEP")
+
+console.log(mystr.slice(2, -9))
+ 
