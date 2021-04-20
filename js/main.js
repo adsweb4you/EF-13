@@ -74,7 +74,7 @@ let $ = function(el){
 }
 
  
-let mystr = "მე ვარ IT STEP GEORGIA IT  სტუდენტის";
+let mystr = "მე ვარ IT STEP GEORGIA |  IT GEORGIA  სტუდენტის";
 
 //ეძებს კონკრეტული სიტყვის ინდექს სტრინგის დასაწყისიდან 
 //mystr.indexOf("IT")
@@ -85,5 +85,54 @@ let mystr = "მე ვარ IT STEP GEORGIA IT  სტუდენტის";
 //ეძებს კონკრეტული სიტყვის ინდექს სტრინგის დასაწყისიდან 
 //mystr.search("STEP")
 
-console.log(mystr.slice(2, -9))
+//slice vs substring | substring არ გადაეცემა უარყოფითი ინდექსი
+//mystr.slice(2, -9)
+
+// მეორე პარამეტრი ინდექს იღებს პირველი პარამეტრიდან და იწყებს ჭრას
+//mystr.substr(7, 2)
+
+//სტრინგში სიმბოლოების ჩანაცვლება
+//val.replaceAll("ცუდი სიტყვა", "xxxx")
+
+
+//შლის სიცარიელეებს სტრინგის მარჯვნიდან და მარცხნიდან
+//val.trim()
+
+
+// console.log(mystr.split(" "))
  
+
+//  function gios(x,y){
+//      return x + y;
+//  }
+
+
+
+let b = 1.5555555;
+
+//გადაყავს სტრინგი ნამბერში
+//Number(b)
+
+// დამრგვალება ერთეული ათეული  აშ...
+//toFixed(2)
+
+
+
+let User  =  {
+    name:"ადმინ",
+    email:"admin@info.ge",
+    age:{age1:45, age2:75},
+    admin:4,
+    address:"მისამართი 1",
+    delate:  function() {
+       if(this.admin == true){
+        console.log("მომხმარებელი არის ადმინი!");
+       }else{
+        console.log("მომხმარებელი არ არის ადმინი!");
+       }
+    }
+}
+
+User.name = "admin2";
+
+User.delate();
