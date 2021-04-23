@@ -136,3 +136,84 @@ let User  =  {
 User.name = "admin2";
 
 User.delate();
+
+
+let Product = {
+    title:"მიქსერი",
+    img:"https://haus.ge/admin/images/products/524.6.jpg",
+    weigt:3.798,
+    price:79.99,
+    qou:8,
+    calc:function(){
+        return this.weigt * this.price;
+    }
+}
+
+let card = `<div class="card">
+<img src="${Product.img}" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">  ${Product.title} </h5>
+  <p class="card-text">წონა: <span class="badge bg-success">${Product.weigt} </span> </p>
+  <p class="card-text">ფასი: <span class="badge bg-success">${Product.price} </span> </p>
+  <p class="card-text">რაოდენობა: <span class="badge bg-info">${Product.qou} </span> </p>
+  <p class="bg-warning p-2 text-center"> ${check()} </p>
+</div>
+</div>`
+
+ document.getElementById("prodc").innerHTML = card;
+
+ function check(){
+   if(Product.qou > 0){
+       var txt = `მარაგშია  რაოდენობა  ${Product.qou}   ერთეული`;
+   }else{
+       var txt = `არ არის მარაგში`
+   }
+
+   return txt;
+ }
+
+
+ let nwarray = ["გიორგი", "ნინო", "თათა", "სანდრო", "გოდერძი" , "ანა"];
+
+ for(let i = 0; i  <  nwarray.length; i++ ){
+     let el = nwarray[i];
+     document.getElementById("cards").innerHTML += el + "<br>";
+     
+ }
+ 
+ 
+
+// მასივის ელემენტების რაოდენობა
+//nwarray.length
+
+// ახალი ელემენტის დამატება მასივის ბოლო ელემენტად
+//nwarray.push("ახალი წევერი")
+
+
+// ახალი ელემენტის წაშლა მასივის ბოლო ელემენტად
+//nwarray.pop("ახალი წევერი")
+
+//ახალი წევრის დამატება მასივის დასაწყისში
+//nwarray.unshift("ახალი წევერი");
+
+//პირველი ელემენტის წაშლა მასივის დასაწყისში
+//nwarray.shift();
+
+// პირველი პარამეტრი უზრუნელყობს იმას თუ რომელი ინდექსიდან უნდა დაიწყოს ჭრა , მეორე პარამეტრი განსაზღვრავს იმას თუ 
+//რამდენდი ინდექსი უნდა მოიჭრას
+//nwarray.splice(2, 1)
+// თუ splice გადაეცემა 3 პარამეტრზე მეტი , პირველი პარამეტრი განსაზღვრავს იმას თუ რომელი ინდექსის შემდეგ
+//უნდა მოხდეს ჭრა | მეორე პარამეტრი განსაზღვრავს რამდენი ელემენტი უნდა წაიშალოს , და თუ ის 0 უდრის მესამე ან შემდეგი 
+//პარამეტრები დალაგდებიან მას შემდეგ
+//nwarray.splice(3, 0, "ახალი პარამეტრი", "ახალი პარამეტრი 2")
+//let slicesarray =  nwarray.slice(-3);
+
+let numbarr = [12,23,34,45,123];
+
+
+
+ function sor(a, b){
+     return b - a  ;
+ } 
+ 
+ //console.log(numbarr.sort(sor));
