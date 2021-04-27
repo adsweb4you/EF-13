@@ -14,7 +14,7 @@ var names = 25;
 var x = 15;
 var y = names - x;
 
-const virable = document.getElementById("test").value;
+//const virable = document.getElementById("test").value;
 
  
 let strings = "<p> დასახელება </p>";
@@ -31,9 +31,9 @@ let funs = function na(){}
 // console.log( Array.isArray(obj) );
 
 
-let divs = document.getElementById("outs");
+//let divs = document.getElementById("outs");
 
-divs.innerHTML = strings;
+//divs.innerHTML = strings;
 //divs.innerText = strings;
 
 
@@ -66,7 +66,7 @@ let clas = 'img-fluid';
 let html   =  `<img src="${img}" class="${clas}">`;
 
 
- document.getElementById("cards").innerHTML = html;
+ //document.getElementById("cards").innerHTML = html;
 
 
 let $ = function(el){
@@ -160,7 +160,7 @@ let card = `<div class="card">
 </div>
 </div>`
 
- document.getElementById("prodc").innerHTML = card;
+ //document.getElementById("prodc").innerHTML = card;
 
  function check(){
    if(Product.qou > 0){
@@ -177,7 +177,7 @@ let card = `<div class="card">
 
  for(let i = 0; i  <  nwarray.length; i++ ){
      let el = nwarray[i];
-     document.getElementById("cards").innerHTML += el + "<br>";
+    // document.getElementById("cards").innerHTML += el + "<br>";
      
  }
  
@@ -208,12 +208,77 @@ let card = `<div class="card">
 //nwarray.splice(3, 0, "ახალი პარამეტრი", "ახალი პარამეტრი 2")
 //let slicesarray =  nwarray.slice(-3);
 
-let numbarr = [12,23,34,45,123];
+ let numbarr = [12,23,34,45,123];
 
 
 
- function sor(a, b){
-     return b - a  ;
- } 
+//  function sor(a, b){
+//      return b - a  ;
+//  } 
  
  //console.log(numbarr.sort(sor));
+
+
+ let agesarr = [14, 8,  28, 45, 70, 54, 87];
+
+// მასივის loop (გამეორება დაბეჭვდა)
+// agesarr.forEach(checkag1);
+
+//აბრუნებს პირველილ ელემენტს რომელიც ასრულებს პირობას
+//agesarr.find(checkag1);
+
+//ქმნის ახალ მასივს და აბრუნებს ყველა იმ ელემენტს რომელიც აკმაყოფილებს პირობას
+// agesarr.filter(checkag1);
+
+// გვიბრუნებს true ან false იმ შემთხვევაში თუ ერთ-ერთი ჩანაწერი ასრულებს პირობას
+// agesarr.some(checkag1);
+
+// გვიბრუნებს true ან false იმ შემთხვევაში თუ ყველა ჩანაწერი ასრულებს პირობას
+// agesarr.every(checkag1);
+
+let findesarr = agesarr.every(checkag1);
+
+ function checkag1(value){
+ 
+  return value >= 7;
+ 
+ }
+
+ console.log(findesarr)
+
+let Products = [
+    {name:"iphone", descr:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod", img:"img/slider.png", price:250},
+    {name:"mac book", descr:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod", img:"img/slider.png", price:350},
+    {name:"pro book", descr:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod", img:"img/slider.png", price:650},
+    {name:"პროდუქტი დასახელბა 4", descr:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod", img:"img/slider.png", price:2050},
+    {name:"პროდუქტი დასახელბა 5", descr:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod", img:"img/slider.png", price:50},
+    {name:"პროდუქტი დასახელბა 6", descr:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod", img:"img/slider.png", price:550},
+    {name:"პროდუქტი დასახელბა 7", descr:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod", img:"img/slider.png", price:950},
+    {name:"პროდუქტი დასახელბა 8", descr:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod", img:"img/slider.png", price:750},
+    {name:"პროდუქტი დასახელბა 9", descr:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod", img:"img/slider.png", price:260}
+];
+
+function calc (els){
+    return els.name.filter("iphone");
+}
+
+let filteredArray  = Products.filter(calc);
+
+
+let outs = document.getElementById("htmls");
+
+filteredArray.forEach(forprod);
+
+function forprod(elements){
+   let prod =  `<div class="col-lg-3 mb-4"> <div class="card">
+   <img src="${elements.img}" class="card-img-top" alt="...">
+   <div class="card-body">
+     <h5 class="card-title">${elements.name}</h5>
+     <p class="card-text">${elements.descr}</p> 
+     <span class="btn btn-primary">${elements.price} ₾</span>
+   </div>
+  </div>
+ </div>`;
+
+ outs.innerHTML += prod;
+}
