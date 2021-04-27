@@ -259,7 +259,7 @@ let Products = [
 ];
 
 function calc (els){
-    return !els.name.search("mac book");
+    return !els.name.search("iphone");
 }
 
 let filteredArray  = Products.filter(calc);
