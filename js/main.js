@@ -248,7 +248,7 @@ let findesarr = agesarr.every(checkag1);
 
 let Products = [
     {name:"iphone", descr:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod", img:"img/slider.png", price:250},
-    {name:"mac book", descr:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod", img:"img/slider.png", price:350},
+    {name:"iphone mac book", descr:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod", img:"img/slider.png", price:350},
     {name:"pro book", descr:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod", img:"img/slider.png", price:650},
     {name:"პროდუქტი დასახელბა 4", descr:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod", img:"img/slider.png", price:2050},
     {name:"პროდუქტი დასახელბა 5", descr:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod", img:"img/slider.png", price:50},
@@ -259,7 +259,7 @@ let Products = [
 ];
 
 function calc (els){
-    return els.name.filter("iphone");
+    return !els.name.search("mac book");
 }
 
 let filteredArray  = Products.filter(calc);
