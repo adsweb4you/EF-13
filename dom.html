@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .range{
+            width: 300px;
+            margin: auto;
+            padding: 7px;
+            border-radius: 7px;
+            box-shadow: 9px 9px 9px #ccc;
+            display: flex;
+           justify-content: center;
+        }
+
+        .range button{
+            display: block;
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+            
+        }
+
+          button, input {
+         border: none;
+         text-align: center;
+          }
+
+          button:hover{
+              cursor: pointer;
+          }
+    </style>
+</head>
+<body>
+
+    <h1 class="animal">ძაღლი</h1>
+    <h1 class="animal">ცხენი</h1>
+    <h1 class="animal">ლომი</h1>
+    <h1 class="animal">ვეფხვი</h1>
+    <h1 class="animal">სპილო</h1>
+    <h1 class="animal">მელა</h1>
+    <h1 class="animal">კუ</h1>
+
+    <button onclick="changetext()">მნიშვნელობების შეცვლა</button>
+    <button onclick="changetextprev()">მნიშვნელობების დაბრუნება</button>
+
+
+    <div class="range">
+     <button class="btn minus" onclick="decr()">-</button>
+     <input type="text" value="1" id="inp">
+     <button class="btn plus" onclick="incr()">+</button>
+    </div>
+    
+    <script src="js/dom.js"></script>
+</body>
+</html>
