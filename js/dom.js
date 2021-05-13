@@ -63,6 +63,16 @@ let close = document.querySelector(".btn-danger.close");
 
 menu.addEventListener("click", function (event) {
    side.classList.toggle("show");
+
+  
+
+   if(menu.style.backgroundColor == "red"){
+      menu.style.backgroundColor = "";
+   }else{
+      menu.style.backgroundColor = "red";
+   }
+
+
 });
 
 
@@ -78,5 +88,60 @@ console.log(event.target.classList);
     side.classList.remove("show");
     
  }
-
   });
+
+
+// let button = document.querySelector(".serbtn");
+// let input = document.querySelector(".form-control");
+// let icon = document.querySelector("#togspan");
+// button.addEventListener("click", function(){
+//   this.classList.toggle("show");
+//   input.classList.toggle("show");
+
+//   if(icon.classList[1] == "bi-search"){
+//    icon.classList.replace("bi-search", "bi-x-lg");
+//   }else{
+//    icon.classList.replace("bi-x-lg", "bi-search");
+//   }
+
+
+//   console.log(input.getAttribute('data-id'))
+
+// })
+
+let drop = document.querySelector(".selcity");
+let icons = document.querySelector('.bs');
+let dropmenu = document.querySelector('.city');
+
+let li = document.querySelectorAll('.city li');
+
+
+let changtxt = document.querySelector('.txt');
+let inputs = document.querySelector('input[name="city_id"]')
+drop.addEventListener("click", function(){
+
+   dropmenu.classList.toggle("show")
+
+if(icons.classList[2] == "bi-caret-down"){
+   icons.classList.replace("bi-caret-down", "bi-caret-up-fill");
+}else{
+   icons.classList.replace("bi-caret-up-fill", "bi-caret-down");
+}
+
+});
+
+
+for (let i = 0; i < li.length; i++) {
+   
+   const list = li[i];
+   let id = list.getAttribute('data-id');
+   let text = list.innerText;
+
+   list.addEventListener("click", function(){
+      changtxt.innerText = text;
+      dropmenu.classList.remove("show");
+      icons.classList.replace("bi-caret-up-fill", "bi-caret-down");
+      inputs.value = id;
+   })
+   
+}
