@@ -145,3 +145,74 @@ for (let i = 0; i < li.length; i++) {
    })
    
 }
+
+let navbar = document.querySelector(".navbar");
+
+ 
+
+
+window.addEventListener("scroll", function(event){
+
+  if(this.scrollY > 250){
+   navbar.classList.add("scrol") 
+  }else{
+   navbar.classList.remove("scrol") 
+  }
+
+   let sct = document.querySelector(".scrolbott");
+   let sts  = document.querySelectorAll(".container.tests");
+
+  let img = document.createElement("img");
+  let container = document.createElement("div");
+  let buttom = document.createElement("button"); 
+  let text = document.createElement("h1");
+
+
+  text.textContent = "h1 ტექსტ"
+  container.classList.add("container", "tests", "text-center");
+  img.setAttribute("src" , "pic.png");
+  img.classList.add("img-fluid");
+  img.setAttribute('alt', "სატესტო სურათი");
+
+  buttom.textContent = "წაშლა";
+  buttom.classList.add("btn", "btn-danger",  "delates");
+
+
+  if(sts.length > 9){
+  
+  }else{
+ 
+  container.appendChild(buttom);
+
+ if(sct.offsetTop - 300 < this.scrollY){
+   sct.appendChild(container); 
+ }
+  }
+
+  let delbtn = document.querySelectorAll(".delates");
+ 
+
+  for (let i = 0; i < delbtn.length; i++) {
+     const element = delbtn[i];
+     element.addEventListener("click", function(){
+    
+      this.remove();
+  })
+  } 
+
+});
+
+ 
+  
+  
+ let mylist  = document.querySelector(".mylist");
+
+//  ზედა მეზოვებელი
+ mylist.nextElementSibling.style.backgroundColor = "green";
+
+ // ქვედა მეზობელი
+ mylist.previousElementSibling.style.backgroundColor = "red";
+
+ mylist.parentElement.style.backgroundColor = "yellow";
+
+console.log( mylist.parentElement.children)

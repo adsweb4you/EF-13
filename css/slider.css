@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.caruser{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.caruser .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    
+    display: inline-block;
+    padding: 13px;
+    border-radius: 3px;
+    border: 4px solid #efefef6b;
+}
+
+.btn-prev{
+     left: 7%;
+}
+
+.btn-nex{
+    right: 7%;
+}
+
+.caruser .items{
+    height: 100vh;
+    /* opacity: 0; */
+    /* transform: translateX(-100%); */
+    width: 100%;
+    margin-left: -100%;
+    float: left;
+ 
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .6s;
+}
+
+.caruser .items.active{
+    /* opacity: 1; */
+    width: 100%;
+    margin-left:0%;
+    transition: all .6s;
+    z-index: 99;
+}
+.items .content {
+    width: 450px;
+    position: absolute;
+    z-index: 77;
+    background-color: #fff;
+    padding: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    box-shadow: 7px 7px 7px #0f090921;
+}
+
+
+.indicator  {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+    z-index: 9999;
+
+}
+
+.indicator span{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.indicator span.active{
+ 
+    background-color: green;
+}
+
+.indicator span:hover{
+  cursor: pointer;
+}
