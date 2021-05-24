@@ -33,29 +33,43 @@ body{
 .btn-nex{
     right: 7%;
 }
+/* 
+.caruser-content{
+     
+ 
+} */
 
 .caruser .items{
-    height: 100vh;
-    /* opacity: 0; */
-    /* transform: translateX(-100%); */
+    height: 100vh; 
     width: 100%;
-    margin-left: -100%;
-    float: left;
- 
-    position: relative;
+    transform: translateX(-100%) ;
+    /* display: none; */
+    position: absolute;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all .6s;
+    float: left;
+    transition: all 3s;
 }
 
+ 
+
 .caruser .items.active{
-    /* opacity: 1; */
-    width: 100%;
-    margin-left:0%;
-    transition: all .6s;
+    opacity: 1;
+    transform: translateX(0) !important;
+    transition: all 3s;
     z-index: 99;
 }
+
+.caruser .items.active + .items{
+    transform: translateX(100%) !important;
+}
+
+.repplaced{
+  display: none;
+}
+
+
 .items .content {
     width: 450px;
     position: absolute;
@@ -94,4 +108,62 @@ body{
 
 .indicator span:hover{
   cursor: pointer;
+}
+
+.port li{
+    display: inline-block;
+    padding: 7px;
+}
+
+.port li:hover{
+  cursor: pointer;
+}
+
+.port li.active{
+  background-color:darkslategrey;
+  color: #fff;
+}
+
+.portfolio div {
+ 
+    width:  0;
+    height: 0;
+    /* opacity: 0; */
+    background-color: darkslategrey;
+    border-radius: 3px;
+    margin: 3px;
+    transition:all .6s;
+    animation: nones;
+    animation-duration: .6s;
+    animation-iteration-count: 1;
+    transform: translateY(-100%) scale(0);
+}
+
+.portfolio div.show {
+    width:32%;
+    height: 150px;
+    /* opacity: 1; */
+    transition:all .6s;
+    transform: translateY(0) scale(1);
+}
+
+.portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+}
+
+@keyframes nones {
+
+    0%{
+        width: 32%;
+     
+    }
+
+     
+    100%{
+        width: 0px;
+         
+    }
 }
