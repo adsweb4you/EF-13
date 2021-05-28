@@ -167,3 +167,38 @@ body{
          
     }
 }
+
+.circle {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+ 
+  }
+
+
+  .animate{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: red;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .animate:hover{
+   cursor: pointer;
+  }
+
+  #tetx{
+      position: absolute;
+      bottom: -50%;
+ 
+ 
+  }
+
+  #an{
+      position: relative;
+      overflow: hidden;
+      transform: translateY();
+  }
