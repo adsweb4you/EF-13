@@ -77,5 +77,24 @@ $(".stop").click(function (e) {
     $("form.w-100").stop();
 });
 
+
+$(".no").click(function ( ) { 
+ 
+    
+    $(".bgred").animate({
+        "width":"100%",
+        "height":"100%",
+        "border-top-left-radius":"0rem",
+        "border-bottom-left-radius":"0rem",
+        "opacity": 1,
+    }, 200, function () {
+   
+        $(".x").addClass("show");
+    })
+    
 });
+
+});
+
+
 
