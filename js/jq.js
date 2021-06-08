@@ -248,6 +248,32 @@ $(".prev").click(function () {
  
 });
 
+let s = 0;
+$(".newfield").click(function ( ) { 
+ 
+   $("#dinamycinput").after("<input name='name' class='removed' value='" + ++s  + "' type='text'>")
+    
+});
+
+$(document).on("dblclick", ".removed",  function (e) { 
+   
+   let confs = localStorage.getItem('conf');
+
+   if (confs != 1) {
+           let r  =  confirm('აღარ მკითხო?');
+
+    if (r == true) {
+      
+       localStorage.setItem('conf', 1);
+
+    }
+   }else{
+        $(this).remove();
+   }
+
+
+});
+
 });
 
 
