@@ -70,3 +70,16 @@ console.log(dog.namess)
 console.log(modul.myname2())
 
 //  animal.config()
+
+
+export default class User {
+    constructor (par1){
+    this.par1 = par1;
+    }
+}
+
+function name(params) {
+    
+}
+
+name("giuo")
