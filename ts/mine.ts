@@ -1,3 +1,5 @@
+import {validate} from "../ts/validate"
+
 let x : string = "25";
 let y : number = 25;
 
@@ -41,24 +43,107 @@ interface Fun {
 }
 
 
-class Animal implements Fun{
+ 
+class Itstap {
+    catagory:number;
 
-    title:string;
 
-    constructor(title  : string){
-    this.title   = title;
+   private ssl : string = "/storage/cert/ssltbc.pem"
+
+
+    constructor(cat:number){
+        this.catagory = cat;
     }
 
 
-    walk(){
-        console.log( this.title  );
+  public  mine(){
+        return  this.ssl;
+    }
+
+    checkcourse(){
+        if(this.catagory  == 1){
+            return console.log("ჩვენ ვსწავლობთ ფრონტ ენდზე");
+        }else{
+            return console.log("ჩვენ ვსწავლობთ ქსელებზე");
+        }
     }
 
 }
 
- 
-let myan = new Animal("Lion");
+class Front extends Itstap {
+     data:string;
 
-myan.walk()
+     constructor(data:string, catagory:number){
+     super(catagory);
+     this.data = data;
+    
+    }
 
- 
+    accetssl(){
+        super.mine();
+    }
+
+
+}
+
+let Stud = new Itstap(1);
+
+// Stud.checkcourse();
+
+console.log(Stud.mine())
+
+abstract class Dogs {
+    food:string;
+    constructor(food:string) {
+        this.food = food;
+    }
+}
+
+interface Food{
+    title:string;
+    test() : void;
+}
+
+class  Jeck extends Dogs implements Food {
+    title;
+    constructor(food:string) {
+        super(food);
+    }
+
+    test(){
+        return "ok";
+    }
+}
+
+let mydog = new Jeck("dogs21");
+
+
+
+
+enum Status {
+   OK = "200",
+   SERVERERROR = "500",
+   NOTFOUND = "404"
+}
+
+
+let test : Status = Status.SERVERERROR
+
+
+
+
+ validate()
+
+
+
+ class user {
+
+    private name: string = "შაკო";
+    private password : any = "asd)23+sed";
+    
+    private Token :any = "238974ehkujfh)(214euhwr";
+
+     constructor(parameters) {
+         
+     }
+ }
