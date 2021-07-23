@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        nav{
+            position: fixed;
+            width: 100%;
+            background-color: darkviolet;
+            z-index: 9999;
+        }
+        body{
+            margin: 0;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+
+        li{
+            display: inline-block;
+        }
+
+        section{
+            height: 100vh;
+            padding-top: 40px;
+          
+        }  
+        
+        section:nth-child(1){
+            background-color: red;
+        }
+        section:nth-child(2){
+            background-color: green;
+        }
+
+        section:nth-child(3){
+            background-color: darkslategrey;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#about">ჩვენ შესახებ</a></li>
+            <li><a href="#product">პროდუქცია</a></li>
+            <li><a href="#contact">კონტაქტი</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h1>ჩვენ შესახებ</h1>
+    </section>
+
+    <section id="product">
+        <h1>პროდუქცია</h1>
+    </section>
+
+
+    <section id="contact">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-target="#carouselExampleIndicators" data-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-target="#carouselExampleIndicators" data-slide-to="1" aria-label="Slide 2"></button>
+               
+              </div>
+            <div class="carousel-inner" role="listbox">
+              <!-- Slide One - Set the background image for this slide in the line below -->
+              <div class="carousel-item     active">
+                <div class="container text-center p-5">
+                <img src="img/bird.png" alt="">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum labore suscipit adipisci
+                     officia excepturi sit non molestias saepe 
+                    distinctio cumque. Corrupti quo magni eveniet nobis veritatis eaque eius, assumenda quia.</p>
+              </div>
+            </div>
+              <div class="carousel-item ">
+                  <div class="container text-center p-5">
+                    <img src="img/dog.png" alt="">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum labore suscipit adipisci
+                     officia excepturi sit non molestias saepe 
+                    distinctio cumque. Corrupti quo magni eveniet nobis veritatis eaque eius, assumenda quia.</p>
+                  </div>
+              
+               </div>
+        
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+               <img src="img/left.png" alt="">
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <img src="img/right.png" alt="">
+            </a>
+          </div>
+    </section>
+      <!-- Bootstrap core JavaScript -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

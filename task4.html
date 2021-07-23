@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <form action="" id="formlite">
+  <p id="output"></p>
+  <input type="text" value="" id="vals">
+  <button id="nwstr" type="submit">დამატება</button>
+</form>
+    
+    <script>
+
+
+let butt = document.querySelector("#nwstr");
+
+butt.addEventListener("click", function(e){
+e.preventDefault();
+
+
+
+let value = document.querySelector("#vals").value;
+let out  = document.querySelector("#output");
+
+
+
+
+out.innerHTML  = value.replace(value[0], "ა");
+
+});
+    </script>
+</body>
+</html>
